@@ -25,6 +25,7 @@ int main() {
 		//ranking.
 		else if(inPut=='r'||inPut=='R'){
 			printf("%s\n%s","Ranking from high to low.\nAce	11 points\nTen 	10 points\nKing	4 points\nQueen 	3 points\nJack	2 points\nNine	0 points","clubs > spades > hearts > diamonds");
+			printf("\n\n%s","King and Queen of Hearts		100 points\nKing and Queen of Diamonds		80 points\nKing and Queen of Clubs			60 points\nKing and Queen of Spades		40 points");
 			printf("\n\n%s\n\n","Click 's' to start game.You can come back to this screen by clicking r.");
 			cin>>inPut;
 		}
