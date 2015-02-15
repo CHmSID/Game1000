@@ -1,3 +1,7 @@
+/*
+    Author: Jerzy Baran
+*/
+
 #include <string>
 #include <stdio.h>
 
