@@ -1,6 +1,9 @@
 /*
-    Author: Jerzy Baran
+	Author: Jerzy Baran
 */
+
+#ifndef CARD_HPP
+#define CARD_HPP
 
 #include <string>
 
@@ -9,13 +12,17 @@ using std::string;
 class Card{
 
 public:
-    Card(int value, int suit);
-    void printCard();
-    int getSuit();
-    int getValue();
+	Card(int value, int suit);
+	void printCard();
+	int getSuit();
+	int getValue();
+	string wordSuit();
 
 private:
-    string wordSuit();
-    int suit;
-    int value;
+	int suit;
+	int value;
+
+	string intToString(int i);
 };
+
+#endif
