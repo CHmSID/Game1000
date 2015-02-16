@@ -1,11 +1,15 @@
 #include <stdio.h>
 #include <iostream>
 #include "Deck.hpp"
+#include "Player.hpp"
+#include "Card.hpp"
 
 using namespace std;
 
 int main(){
 	Deck deck(CARDS_26);
+	deck.shuffle();
+	
 	printf("\n\n\n%40s\n","Game of 1000");
 	printf("%s\n%s\n%s\n\n","To start the game type: s",
 			"To check the ranking of the cards type: r",
@@ -13,14 +17,20 @@ int main(){
 	char inPut;
 	cin >> inPut;
 	bool game=true;
+	Player p;
 	
 	while(game){
 		//start game.
 		if(inPut=='s'||inPut=='S'){
 			//start the game.
 			printf("Cards in deck: %i\n", deck.getNumCardsInDeck());
-			Card c = deck.drawCard();
-			printf("Removed: %s\n", c.wordSuit().c_str());
+			
+			//test to give player 7 cards.
+			for(int i=0;i<7;i++){
+				p.addCards(deck);
+				printf("A card given to player\n");
+			}
+
 			printf("Cards in deck: %i\n", deck.getNumCardsInDeck());
 			cin>>inPut;
 		}
@@ -35,6 +45,9 @@ int main(){
 		//quit game.
 		else if(inPut=='q'||inPut=='Q'){
 			game=false;
+		}
+		else{
+			cin>>inPut;
 		}
 	}
 	
