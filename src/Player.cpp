@@ -17,3 +17,7 @@ void Player::addCards(Deck &d){
 	hand.push_back(d.drawCard());	
 }
 
+void Player::showCards(int i){
+		Card c=hand.at(i);
+		printf("%s\n",c.wordSuit().c_str());
+}

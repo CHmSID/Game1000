@@ -18,7 +18,6 @@ int main(){
 	cin >> inPut;
 	bool game=true;
 	Player p;
-	
 	while(game){
 		//start game.
 		if(inPut=='s'||inPut=='S'){
@@ -26,10 +25,12 @@ int main(){
 			printf("Cards in deck: %i\n", deck.getNumCardsInDeck());
 			
 			//test to give player 7 cards.
+			printf("%s\n%s\n","Your Hand","================================================");
 			for(int i=0;i<7;i++){
 				p.addCards(deck);
-				printf("A card given to player\n");
+				p.showCards(i);
 			}
+			printf("%s\n","================================================");
 
 			printf("Cards in deck: %i\n", deck.getNumCardsInDeck());
 			cin>>inPut;
