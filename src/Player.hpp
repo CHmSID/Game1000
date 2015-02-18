@@ -16,6 +16,7 @@ public:
 	
 	vector<Card> hand;
 	void addCards(Deck &d);
+	void showCards(int i);
 };
 
 
